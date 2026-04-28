@@ -41,7 +41,7 @@ class Program
             {
                 sign = "+";
             }
-            else if (lastNumber >= 7)
+            else if (lastNumber <= 7)
             {
                 sign = "-";
             }
