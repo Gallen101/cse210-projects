@@ -19,8 +19,8 @@ class Program
             if(menuNumber == 1)
             {
                 string prompt = promptPrinter.GetRandom();
-                Console.WriteLine($"Prompt: {prompt}");
-                Console.Write("Response:");
+                Console.WriteLine(prompt);
+                Console.Write(">");
                 string response = Console.ReadLine();
 
                 Entry newEntry = new Entry();

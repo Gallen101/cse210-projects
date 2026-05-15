@@ -17,6 +17,7 @@ public class Journal
         foreach ( Entry entry in _journal)
         {
             entry.display();
+            Console.WriteLine();
         }
 
     }
@@ -26,7 +27,7 @@ public class Journal
         {
             foreach (Entry entry in _journal)
             {
-                outputFile.WriteLine($"{entry._time}, {entry._prompt}, {entry._entry}");
+                outputFile.WriteLine($"{entry._time} | {entry._prompt} | {entry._entry}");
             }
             outputFile.Flush();
         }
@@ -46,7 +47,7 @@ public class Journal
 
         foreach (string line in lines)
         {
-            string[] parts = line.Split(", ");
+            string[] parts = line.Split("|");
 
             if (parts.Length == 3)
             {
