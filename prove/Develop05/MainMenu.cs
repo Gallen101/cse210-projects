@@ -2,8 +2,7 @@ using System;
 
 public class MainMenu
 {
-    // Attributes 
-    private string _menu = $@"
+    private string ga_menu = $@"
 Main Menu Options
 ===========================================
 Please select one of the following options:
@@ -18,16 +17,12 @@ Select an option from the menu:  ";
 
     public string _userInput;
     private int _userChoice = 0;
-
-    // Methods
     public int UserChoice()
-    // Method to display choices to user
     {
-        Console.Write(_menu);
+        Console.Write(ga_menu);
 
         _userInput = Console.ReadLine();
         _userChoice = 0;
-        // This block catches any non integer values that are entered
         try
         {
             _userChoice = int.Parse(_userInput);

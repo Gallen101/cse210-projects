@@ -2,8 +2,7 @@ using System;
 
 public class GoalMenu
 {
-    // Attributes 
-    private string _menu = $@"
+    private string ga_menu = $@"
 Goal Menu Options
 ===========================================
 The Types of Goals are:
@@ -20,14 +19,12 @@ What type of goal would you like to create?  ";
 
     // Methods
     public int GoalChoice()
-    // Method to display choices to user
     {
 
-        Console.Write(_menu);
+        Console.Write(ga_menu);
 
         _goalInput = Console.ReadLine();
         _goalChoice = 0;
-        // This block catches any non integer values that are entered
         try
         {
             _goalChoice = int.Parse(_goalInput);

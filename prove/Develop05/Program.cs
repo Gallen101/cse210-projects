@@ -6,42 +6,33 @@ class Program
 {
     static void Main(string[] args)
     {
-        // Use to convert text to title case
         TextInfo textInfo = new CultureInfo("en-US", false).TextInfo;
 
         GoalManagement goals = new GoalManagement();
 
-        Console.Clear();  // This will clear the console
+        Console.Clear();
         Console.Write("\n*** Welcome to the Eternal Quest Program ****\n");
 
         Console.Write($"\n*** You currently have {goals.GetTotalPoints()} points! ***\n");
-        //Call MainMenu
         MainMenu choice = new MainMenu();
-        //Call GoalMenu
         GoalMenu goalChoice = new GoalMenu();
 
 
         int action = 0;
         while (action != 6)
-        // switch case for main menu
         {
-            // Ask for user input (1-6)
             action = choice.UserChoice();
             switch (action)
             {
                 case 1:
-                    // Create New Goal
-                    Console.Clear();  // This will clear the console
-                    // Ask for user input (1-4)
+                    Console.Clear(); 
                     int goalInput = 0;
                     while (goalInput != 5)
-                    // switch case for goals menu
                     {
                         goalInput = goalChoice.GoalChoice();
                         switch (goalInput)
                         {
                             case 1:
-                                // Simple Goal
                                 Console.WriteLine("What is the name of your goal?  ");
                                 string name = Console.ReadLine();
                                 name = textInfo.ToTitleCase(name);
@@ -55,7 +46,6 @@ class Program
                                 goalInput = 5;
                                 break;
                             case 2:
-                                // Eternal Goal
                                 Console.WriteLine("What is the name of your goal?  ");
                                 name = Console.ReadLine();
                                 name = textInfo.ToTitleCase(name);
@@ -69,7 +59,6 @@ class Program
                                 goalInput = 5;
                                 break;
                             case 3:
-                                // Checklist Goal
                                 Console.WriteLine("What is the name of your goal?  ");
                                 name = Console.ReadLine();
                                 name = textInfo.ToTitleCase(name);
@@ -87,7 +76,6 @@ class Program
                                 goalInput = 5;
                                 break;
                             case 4:
-                                // Negative Goal
                                 Console.WriteLine("What is the name of your goal?  ");
                                 name = Console.ReadLine();
                                 name = textInfo.ToTitleCase(name);
@@ -101,7 +89,6 @@ class Program
                                 goalInput = 5;
                                 break;
                             case 5:
-                                // Exit
                                 break;
                             default:
                                 Console.WriteLine($"\nSorry the option you entered is not valid.");
@@ -110,29 +97,24 @@ class Program
                     }
                     break;
                 case 2:
-                    // List Goals
-                    Console.Clear();  // This will clear the console
+                    Console.Clear();
                     Console.Write($"\n*** You currently have {goals.GetTotalPoints()} points! ***\n");
                     goals.ListGoals();
                     break;
                 case 3:
-                    // Save Goals
                     goals.SaveGoals();
                     break;
                 case 4:
-                    // Load Goals
-                    Console.Clear();  // This will clear the console
+                    Console.Clear();
                     Console.Write($"\n*** You currently have {goals.GetTotalPoints()} points! ***\n");
                     goals.LoadGoals();
                     break;
                 case 5:
-                    // Record Event
-                    Console.Clear();  // This will clear the console
+                    Console.Clear();
                     Console.Write($"\n*** You currently have {goals.GetTotalPoints()} points! ***\n");
                     goals.RecordGoalEvent();
                     break;
                 case 6:
-                    // Quite
                     Console.WriteLine("\nThank you for using the Eternal Quest Program!\n");
                     break;
                 default:
