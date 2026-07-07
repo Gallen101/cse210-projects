@@ -1,0 +1,3 @@
+10
+Simple Goal:; Peanut; Eat More Peanut Butter; 10; True
+Simple Goal:; P; 1; 1; False
