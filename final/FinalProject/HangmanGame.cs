@@ -24,6 +24,9 @@ public class Hangman
     {
         Console.Clear();
         SelectRandomWord(fileName);
+
+        player.ShowRandomWord();
+
         do
         {
             Console.Clear();

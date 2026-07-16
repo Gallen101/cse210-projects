@@ -20,7 +20,7 @@ Choose an option from the menu:  ";
     }
     public override void MenuChoice()
     {
-        //Menu listMenu = new ListMenu(); 
+         
 
         while (ga_action != 3)
         {
@@ -28,13 +28,14 @@ Choose an option from the menu:  ";
             switch(ga_action)
             {
                 case 1:
-                ga_fileName = "words.txt";
-                //Hangman game = new Hangman();
-                //Game.StartGame(ga_fileName);
-                break;
-                case 2:
                     Console.Clear();
-                    //listMenu.MenuChoice();
+                    ListMenu listMenu = new ListMenu();
+                    listMenu.MenuChoice();
+                    break;
+                case 2:
+                    ga_fileName = "words.txt";
+                    Hangman game = new Hangman();
+                    game.StartGame(ga_fileName);
                     break;
                 case 3: 
                     Console.Clear();

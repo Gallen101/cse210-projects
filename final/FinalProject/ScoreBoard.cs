@@ -6,7 +6,7 @@ public class ScoreBoard
 
     public ScoreBoard(Scoring scoringRules)
     {
-        this.scoreingRules = scoreingRules;
+        scoreingRules = scoringRules;
     }
 
     public void DisplayScore(int numGuesses, List<string> letters, string word)

@@ -44,7 +44,7 @@ public class Player
     }
     public bool GameOver()
     {
-        return ((ga_wrongGuessCount == 7) == (ga_correctGuessCount == ga_randomWord.Length));
+        return ((ga_wrongGuessCount == 7) || (ga_correctGuessCount == ga_randomWord.Length));
     }
     public void ShowRandomWord()
     {
@@ -70,7 +70,7 @@ public class Player
                 sb.Append(ga_randomWord[i].ToString()).Append(" ");
             }
         }
-        //ShowRandomWord = sb.ToString();
+        ga_showRandomWord = sb.ToString();
 
     }
 
